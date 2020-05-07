@@ -19,3 +19,12 @@ make -j4
 cp src/.libs/libmagic-1.dll ../dist/
 cp src/.libs/file.exe ../dist/
 cp COPYING ../dist/COPYING.file
+
+separateDebugSymbols() {
+  objcopy --only-keep-debug $1.dll $1.dbg
+  objcopy --strip-debug --strip-unneeded $1.dll
+}
+
+cd ../dist
+separateDebugSymbols "libgnurx-0"
+separateDebugSymbols "libmagic-1"
