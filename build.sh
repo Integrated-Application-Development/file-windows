@@ -13,7 +13,8 @@ autoreconf -f -i
 make -j4
 cp magic/magic.mgc ../dist/
 make clean
-./configure --disable-silent-rules --enable-fsect-man5 --host=i686-w64-mingw32
+# Using CC param instead of passing LDFLAGS='-static-libgcc' due to a bug in libtool.
+./configure CC='i686-w64-mingw32-gcc -static-libgcc' --disable-silent-rules --enable-fsect-man5 --host=i686-w64-mingw32
 make -j4
 cp src/.libs/libmagic-1.dll ../dist/
 cp src/.libs/file.exe ../dist/
