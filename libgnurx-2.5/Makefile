@@ -3,7 +3,7 @@ all: libgnurx-0.dll libgnurx.dll.a libregex.a
 THIS = libgnurx
 VERSION = 2.5
 
-CC = x86_64-w64-mingw32-gcc -mthreads
+CC = i686-w64-mingw32-gcc -mthreads
 CFLAGS = -I .
 
 SOURCES = $(wildcard *.c *.h)
