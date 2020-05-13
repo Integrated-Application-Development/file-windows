@@ -28,7 +28,7 @@ The build process throws tons of warnings and errors since the Ubuntu environmen
     file.exe
     libgnurx-0.dll
     libmagic-1.dll
-    magic.mgc
+    libmagic.mgc
 
 That's it! You can move this directory into your Windows environment.
 
