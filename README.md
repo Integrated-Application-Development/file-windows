@@ -17,8 +17,9 @@ You will need to install some packages before building:
 How to Build
 -------
 
-    git clone https://github.com/nscaife/file-windows.git
+    git clone https://github.com/iadcode/file-windows.git
     cd file-windows
+    git checkout win32
     git submodule init && git submodule update
     ./build.sh
 
